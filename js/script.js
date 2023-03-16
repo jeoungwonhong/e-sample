@@ -1,20 +1,10 @@
 $(function(){
     //네비게이션 셋팅
-    $('.fir').hover(function(){
-        $(this).find($('.lnb_1').slideToggle());
+    for(let i = 0; i < 5; i++){
+        $('.gnb>li').eq(i).hover(function(){
+        $('.lnb').eq(i).stop().slideToggle(800);
     });
-    $('.se').hover(function(){
-        $(this).find($('.lnb_2').slideToggle());
-    });
-    $('.th').hover(function(){
-        $(this).find($('.lnb_3').slideToggle());
-    });
-    $('.fo').hover(function(){
-        $(this).find($('.lnb_4').slideToggle());
-    });
-    $('.fi').hover(function(){
-        $(this).find($('.lnb_5').slideToggle());
-    });
+    }
 
     //페이지 박스
     $('.number span').click(function(){

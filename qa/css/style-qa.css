@@ -45,11 +45,11 @@ header {
 /********** NAVIGATION **********/
 nav .gnb {
     display: flex;
-    padding-left: 60px;
+    padding-left: 40px;
 }
 .gnb>li {
     display: block;
-    width: 100px;
+    width: 150px;
     text-align: center;
     position: relative;
     z-index: 100;
@@ -67,10 +67,10 @@ nav .gnb {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #333;
+    background: #fff;
     position: absolute;
     top: 5px;
-    left: 48px;
+    left: 74px;
     display: none;
 }
 .gnb>li>a:hover::before {
@@ -94,6 +94,7 @@ nav .gnb {
     top: 55px;
     display: none;
     z-index: 99;
+    font-size: 14px;
 }
 .lnb a {
     color: #fff;

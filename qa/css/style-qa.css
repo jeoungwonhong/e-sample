@@ -25,12 +25,21 @@ a {
 
 /********** HEADER **********/
 header {
+    background: #000;
+}
+#header {
     height: 70px;
     display: flex;
     padding-left: 50px;
-    background: #edf2f3;
     align-items: center;
     position: relative;
+}
+.logo {
+    display: block;
+    width: 100px;
+    height: 20px;
+    background: url(../images/logo.png) no-repeat;
+    background-size: 100%;
 }
 
 /********** NAVIGATION **********/
@@ -46,6 +55,7 @@ nav .gnb {
     z-index: 100;
 }
 .gnb>li>a {
+    color: #bbb;
     font-family: san-serif;
     font-weight: 900;
     display: block;
@@ -119,6 +129,9 @@ nav .gnb {
     float: right;
     position: absolute;
     right: 30px;
+}
+.icon a {
+    color: #bbb;
 }
 .material-symbols-outlined {
     padding-left: 10px;
@@ -269,60 +282,72 @@ nav .gnb {
     background: #f7f5f5;
     border: 1px solid #545454;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 /********** FOOTER **********/
 footer {
-    padding: 30px 80px;
-    height: 150px;
-    background-color: #c0c0c2;
+    background-color: #000;
     position: relative;
+    color: #bbb;
 }
-.d-flex {
+.ft-top {
+    padding: 24px 0;
+    height: 90px;
     display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #1e1e1e;
+}
+#map {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    height: 42px;
     align-items: center;
 }
-footer .img {
-    font-size: 20px;
+#map li {
+    margin-left: 20px;
+    position: relative;
+}
+#map li:not(:last-child):after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: -10px;
+    height: 15px;
+    width: 1px;
+    background: #444444;
+    
+}
+.point {
+    color: #c36f51;
+    font-weight: 700;
 }
 .sns {
     display: flex;
-    padding-left: 65px;
-}
-.sns li {
-    padding-right: 35px;
-    font-weight: 700;
-}
-footer .mv {
-    position: absolute;
-    top: 80px;
-    left: 215px;
-    font-size: 14px;
-}
-.info {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-.info li {
-    position: relative;
-}
-.info li:not(:first-child) {
     padding: 0 10px;
+    align-items: center;
+    text-align: center;
 }
-.info li:first-child {
-    padding-right: 10px;
+.sns a {
+    display: block;
+    width: 42px;
+    margin-left: 12px;
 }
-.info li::before {
-    content: '';
-    width: 1px;
-    height: 14px;
-    background: #333;
-    position: absolute;
-    top: 3px;
-    right: -1px;
+.sns i {
+    color: #bbb;
+    font-size: 20px;
 }
-footer p {
-    margin: 0;
-    padding: 0;
+.ft-bottom {
+    padding: 55px 0 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.copy {
+    margin-top: 26px;
+    font-weight: 500;
 }

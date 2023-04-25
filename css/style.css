@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.title-kang {
+    font-size: 60px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.title-kang p::after {
+   content: "";
+   width: 60px;
+   border-bottom: 1px solid #333;
+   margin: 20px auto;
+   display: block;
+}
+
+.row-kang {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.row-kang img {
+    width: 635px;
+    height: 635px;
+    transition: all 300ms;
+}
+
+.img-kang {
+    overflow: hidden;
+}
+
+.inimg-kang {
+    display: none;
+}
+
+.img-kang:hover .inimg-kang {
+    display: block;
+}
+
+.img-kang:hover img {
+    filter: brightness(0.5);
+    transform: scale(1.2);
+}
+
+.row-kang p {
+    position: absolute;
+    bottom: 50px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 40px;
+    z-index: 99;
+}
+
+.row-kang a {
+    text-decoration: none;
+    font-size: 40px;
+    color: #fff;
+}
+
+.row-kang a:hover {
+    text-decoration: underline;
+    color: #999;
+}
+
+

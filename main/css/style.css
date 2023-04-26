@@ -167,6 +167,7 @@ ul, li {
     line-height: 28px;
 }
 .listbox-hong {
+    position: relative;
     text-transform: uppercase;
     width: 300px;
 }
@@ -189,7 +190,7 @@ ul, li {
 }
 .s-list-hong {
     position: absolute;
-    top: 241px;
+    top: 42px;
     z-index: 10;
     width: 300px;
     background: #000;

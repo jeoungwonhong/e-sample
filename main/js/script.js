@@ -23,4 +23,14 @@ $(function(){
         $('.libtn-hong').removeClass('selected-hong');
         $(this).toggleClass('selected-hong');
     })
+
+    $('.one-time').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
 });
+
+

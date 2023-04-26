@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+a, a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+/***** HEADER *****/
+header {
+  background: #000;
+}
+#header {
+  height: 70px;
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  display: block;
+  width: 100px;
+  height: 20px;
+  background: url(../images/logo.png) no-repeat;
+  background-size: 100%;
+}
+
+/********** NAVIGATION **********/
+nav .gnb {
+  display: flex;
+  padding-left: 40px;
+}
+.gnb>li {
+  display: block;
+  width: 150px;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+.gnb>li>a {
+  color: #bbb;
+  font-family: san-serif;
+  font-weight: 900;
+  display: block;
+  line-height: 55px;
+  position: relative;
+}
+.gnb>li>a::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 5px;
+  left: 74px;
+  display: none;
+}
+.gnb>li>a:hover::before {
+  display: block;
+  animation: fadein 0.8s;
+}
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+.lnb {
+  padding: 0;
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  left: 0;
+  top: 55px;
+  display: none;
+  z-index: 99;
+  font-size: 14px;
+}
+.lnb a {
+  color: #fff;
+  position: relative;
+}
+.lnb li {
+  margin: 12px 0;
+}
+.lnb li:first-child {
+  margin-top: 20px;
+}
+.lnb li:last-child {
+  margin-bottom: 20px;
+}
+.lnb a::before {
+  content: '';
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  left: 0px;
+  right: 0px;
+  bottom: -5px;
+  transform-origin: bottom right;
+}
+.lnb a:hover::before {
+  transform: scaleX(1);
+  transform-origin:bottom left;
+  
+}
+.icon {
+  float: right;
+  position: absolute;
+  right: 30px;
+}
+.icon a {
+  display: inline-block;
+  color: #bbb;
+}
+.material-symbols-outlined {
+  padding-left: 10px;
+}
+
+
+.container-login {
+  width: 500px;
+  height: 500px;
+  margin: 200px auto;
+  padding: 50px;
+  border: 1px solid #000;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  padding: 10px;
+}
+
+.input-box {
+  position: relative;
+  margin: 10px 0;
+}
+
+.input-box>input {
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px #ccc;
+  padding: 20px 0px 5px 0px;
+  font-size: 14pt;
+  width: 100%;
+}
+
+input::placeholder {
+  color: transparent;
+}
+
+input:placeholder-shown+label {
+  color: #aaa;
+  font-size: 14pt;
+  top: 15px;
+
+}
+
+input:focus+label,
+label {
+  color: #8aa1a1;
+  font-size: 10pt;
+  pointer-events: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+  border-bottom: solid 1px #8aa1a1;
+  outline: none;
+}
+
+input[type=submit] {
+  background-color: rgb(100, 100, 240);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 35px;
+  font-size: 14pt;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+#forgotid {
+  text-align: right;
+  font-size: 12pt;
+  color: rgb(164, 164, 164);
+  margin: 10px 2px;
+  cursor: pointer;
+  height: 20px;
+}
+#forgotps {
+  text-align: right;
+  font-size: 12pt;
+  color: rgb(164, 164, 164);
+  margin: 10px 2px;
+  cursor: pointer;
+  height: 20px;
+}
+.forgot{
+  float: right;
+  display: flex;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>게시판</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            /* Container */
+            .container-choi {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            /* Form */
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            textarea {
+                height: 150px;
+            }
+
+            /* Buttons */
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .cancel,
+            button {
+                padding: 10px 20px;
+                font-size: 18px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .cancel,
+            button {
+                background-color: #007bff;
+            }
+
+            .cancel:hover,
+            button:hover {
+                background-color: #0062cc;
+            }
+            #bulletin-board {
+                width: 100%;
+                color: #000;
+            }
+        </style>
+        <script src="../js/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container-choi">
+            <form>
+
+                <h1>글 작성</h1>
+
+                <input type="text" id="name" name="name" placeholder="이름:">
+
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="제목:">
+
+                <textarea id="message" name="message" placeholder="내용:"></textarea>
+
+                <input type="date" id="date" name="date" placeholder="날짜">
+
+                <button id="submit">작성 완료</button>
+
+            </form>
+
+            <div id="bulletin-board"></div>
+
+        </div>
+        <script>
+            $(document).ready(function () {
+                $("#submit").click(function (e) {
+                    e.preventDefault();
+
+                    // values
+                    var name = $("#name").val();
+                    var subject = $("#subject").val();
+                    var message = $("#message").val();
+                    var date = $("#date").val();
+
+                    // create 
+                    var newPost = '<div class="post"><h2>' + subject + '</h2><p>' + message + '</p>' +
+                            '<p>작성자: ' + name + '</p><p>작성일: ' + date + '</p></div>';
+
+                    // append 
+                    $("#bulletin-board").append(newPost);
+
+                });
+            });
+        </script>
+    </body>
+</html>
